@@ -15,9 +15,10 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
 
 1. [Installation](#installation)
 2. [Code Structure](#code-structure)
-3. [About OpenAI Models and Tokens](#about-openai-models-and-tokens)
-4. [Important Note](#important-note)
-5. [Disclaimer](#disclaimer)
+3. [Workflow (programming)](#Workflow-(programming)) 
+4. [About OpenAI Models and Tokens](#about-openai-models-and-tokens)
+5. [Important Note](#important-note)
+6. [Disclaimer](#disclaimer)
 
 ![image](https://github.com/Slamsneider/SingleTom/assets/192285/cee99d3c-5b20-475f-ab8b-62ad7ec66095)
 
@@ -38,6 +39,18 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
 - `functions.js`: Main functionality of the application, including sending messages and handling responses.
 - `dropTextFile.js`: Functionality for drag and drop text files to the history.
 - `styles.css`: CSS styles for the application.
+
+## Workflow (programming)
+You do not need to supply all documents when working with code, normally you would only have the essential parts in memory or your prompt.
+
+But if need be then it handles multiple documents and can work with them.
+
+Here an example where I threw all SingleTom's scripts in history and asked a question:
+
+![image](https://github.com/Slamsneider/SingleTom/assets/192285/129ce56a-48be-4a0f-a452-23e882bde7d6)
+
+This example is only to somehow illustrate the flexibillity of this workflow.
+
 
 ## About OpenAi Models and Tokens
 Each model have a different total tokens available for the inference (request). One token is approximately 4 characters.
