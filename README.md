@@ -11,6 +11,8 @@ Please note that this project is intended for local use and learning purposes. I
 
 It's important to clarify that this project is not a fully-fledged application. However, with some modifications, you can transform it into one if desired.
 
+NOTE: When one or more text files are dropped onto the 'history', its contents are read and appended to the textarea so you can 'talk with it'.
+
 1. [Installation](#installation)
 2. [Code Structure](#code-structure)
 3. [About OpenAI Models and Tokens](#about-openai-models-and-tokens)
