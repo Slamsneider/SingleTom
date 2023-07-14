@@ -20,7 +20,7 @@ It's important to clarify that this project is not a fully-fledged application. 
 ![image](https://github.com/Slamsneider/SingleTom/assets/192285/5a2afdad-683f-4bcb-90a2-7747464278db)
 
 ## Installation
-1. Press the green "Code" button on the project page and choose "Download ZIP" to download the project.
+1. Press the green "Code" button on the project page and choose "Download ZIP" to download the project.  (or [download here](https://github.com/Slamsneider/SingleTom/archive/refs/heads/main.zip))
 2. Once downloaded, unzip the `html` folder to your desired location.
 3. **RENAME** `apikeys.js.install` to `apikeys.js` and open the file in a text editor.
 4. Replace `YOUR_OPENAI_API_KEY_HERE` with your OpenAI API key.
