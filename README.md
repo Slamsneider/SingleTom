@@ -15,7 +15,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
 
 1. [Installation](#installation)
 2. [Code Structure](#code-structure)
-3. [Workflow (programming)](#Workflow-(programming)) 
+3. [Workflow (programming)](#Workflow-(programming))
 4. [About OpenAI Models and Tokens](#about-openai-models-and-tokens)
 5. [Important Note](#important-note)
 6. [Disclaimer](#disclaimer)
