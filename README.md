@@ -19,7 +19,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
 4. [Important Note](#important-note)
 5. [Disclaimer](#disclaimer)
 
-![image](https://github.com/Slamsneider/SingleTom/assets/192285/768529e5-72b6-48f9-ab74-5e9d5a1b96a0)
+![image](https://github.com/Slamsneider/SingleTom/assets/192285/cee99d3c-5b20-475f-ab8b-62ad7ec66095)
 
 ## Installation
 1. Press the green "Code" button on the project page and choose "Download ZIP" or [download here](https://github.com/Slamsneider/SingleTom/archive/refs/heads/main.zip).
