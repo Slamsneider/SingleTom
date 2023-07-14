@@ -17,7 +17,7 @@ It's important to clarify that this project is not a fully-fledged application. 
 4. [Important Note](#important-note)
 5. [Disclaimer](#disclaimer)
 
-![image](https://github.com/Slamsneider/SingleTom/assets/192285/8f4fc81e-b0f3-4dfd-8632-ab0b1e927205)
+![image](https://github.com/Slamsneider/SingleTom/assets/192285/5a2afdad-683f-4bcb-90a2-7747464278db)
 
 ## Installation
 1. Press the green "Code" button on the project page and choose "Download ZIP" to download the project.
