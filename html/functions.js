@@ -124,6 +124,6 @@ function doReturn(response) {
     messageContent = CheckmessageContent(messageContent);
     $("#response").val(messageContent);
     const modeltokens = models[$("#model").val()].tokens;
-    let msg = "Total tokens used: " + totalTokens + " of " + modeltokens + " | Finish reason: " + finReason;
+    const msg = "Total tokens used: " + totalTokens + " of " + modeltokens + " | Finish reason: " + finReason;
     $("#ResponseInNumbers").text(msg);
 }
