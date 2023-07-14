@@ -123,7 +123,6 @@ function doReturn(response) {
     console.log("finishReason: ", finReason);
     messageContent = CheckmessageContent(messageContent);
     $("#response").val(messageContent);
-    //modeltokens = model key in agents object
     const modeltokens = models[$("#model").val()].tokens;
     let msg = "Total tokens used: " + totalTokens + " of " + modeltokens + " | Finish reason: " + finReason;
     $("#ResponseInNumbers").text(msg);
