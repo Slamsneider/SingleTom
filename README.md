@@ -41,7 +41,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
 - `styles.css`: CSS styles for the application.
 
 ## Workflow (programming)
-You do not need to supply all documents when working with code, normally you would only have the essential parts in memory or your prompt.
+You do not need to supply all documents when working with code, normally you would only have the essential parts in history (memory) or in your prompt.
 
 But if need be then it handles multiple documents and can work with them.
 
