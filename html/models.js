@@ -1,3 +1,4 @@
+//REF: https://platform.openai.com/docs/models
 const models = {
     "gpt-3.5-turbo": {
         text: "gpt-3.5-turbo | 4096",
