@@ -1,4 +1,4 @@
-# SingleTom.
+# SingleTom
 ## A GPT tool (client) using OpenAI's API
 
 This is a tutorial project that combines HTML and JavaScript to create a local HTML client. The client utilizes OpenAI's GPT API, eliminating the need for a server, node.js, or Python. To get started, simply open the HTML file in your browser.
