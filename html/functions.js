@@ -53,9 +53,10 @@ $(document).ready(function () {
 });
 
 async function doSend(myModel, mySystemprompt, myHistory, myUserprompt, max_tokens, temperature) {
-    const messages = myHistory + "\n\n" + myUserprompt;
+    const messages = myHistory + "USER: " + myUserprompt;
     $("#but_send").text("WAIT...");
     $("#but_send").prop("disabled", true);
+    console.log("messages: ", messages);
 
     try {
         const response = await $.ajax({
