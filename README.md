@@ -35,8 +35,8 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
 - `index.html`: Main HTML file for the application.
 - `apikeys.js`: Contains the API key for OpenAI's API.
 - `models.js`: OpenAI Models.
-- `agents.js`: Agent definitions. (make your own)
-- `functions.js`: Main functionality of the application, including sending messages and handling responses.
+- `agents.js`: Agent definitions. (make/add your own)
+- `functions.js`: Main functionality of the application.
 - `dropTextFile.js`: Functionality for drag and drop text files to the history.
 - `styles.css`: CSS styles for the application.
 
