@@ -11,7 +11,7 @@ Please note that this project is intended for local use and learning purposes. I
 
 It's important to clarify that, even being useful as-is, this project is not a fully-fledged application. However, with some modifications, you can transform it into one if desired.
 
-NOTE: When one or more text files are drag/dropped onto the 'history' textarea, its contents are read and appended to the textarea so you can 'talk with it'.
+NOTE: When one or more text files are drag/dropped onto the 'history' textarea, their contents are read and appended to the textarea so you can 'talk with it'.
 
 1. [Installation](#installation)
 2. [Code Structure](#code-structure)
