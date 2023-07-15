@@ -9,7 +9,7 @@ The **SingleTom** client is designed to be a simple demo and serve as a source o
 
 Please note that this project is intended for local use and learning purposes. If you were to use it on a public server, be cautious as your API key would be exposed to the world.
 
-It's important to clarify that this project is not a fully-fledged application. However, with some modifications, you can transform it into one if desired.
+It's important to clarify that, even being useful as-is, this project is not a fully-fledged application. However, with some modifications, you can transform it into one if desired.
 
 NOTE: When one or more text files are drag/dropped onto the 'history' textarea, its contents are read and appended to the textarea so you can 'talk with it'.
 
