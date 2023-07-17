@@ -23,7 +23,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   5. Save the changes made in the `apikeys.js` file.
   6. Now, open the `index.html` file in your browser to start using the application.
 
-  NOTE: Do **NOT** rename or add your api key to the `apicall.php.RENAME_AND_ADD_API_KEY` file unless you (optional) intend to run the application from a PHP server. (see below)
+  NOTE: Do **NOT** rename or add your api key to the `apicall.php.RENAME_AND_ADD_API_KEY` file unless you (optional) intend to run the application ONLINE from a PHP server. (see below)
 </details>
 
 <details>
