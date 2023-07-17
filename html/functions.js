@@ -1,4 +1,11 @@
+let bLocalRun;
 $(document).ready(function () {
+    //check if running locally or on server so we can hide the api key if online
+    if (typeof openai_apikey === 'undefined') {
+        bLocalRun = false;
+    } else {
+        bLocalRun = true;
+    }
     //populate agent dropdown
     const agentSelect = $("#agent");
     for (const agentKey in agents) {
@@ -40,7 +47,7 @@ $(document).ready(function () {
         const max_tokens = parseInt($("#max_tokens").val());
         const temperature = parseFloat($("#temperature").val());
 
-        doSend(model, systemprompt, history, userprompt, max_tokens, temperature);
+        doSend(model, systemprompt, history, userprompt, max_tokens, temperature, bLocalRun);
     });
     $("#but_ClearHistory").click(function () {
         $("#history").val("");
@@ -51,15 +58,66 @@ $(document).ready(function () {
     //-----------------end of event listeners
     agentSelect.trigger("change");//updates system prompt text here at start
 });
+async function doSend(myModel, mySystemprompt, myHistory, myUserprompt, max_tokens, temperature, bLocalRun) {
+    const url = bLocalRun ? 'https://api.openai.com/v1/chat/completions' : 'apicall.php';
+    const messages = myHistory + "USER: " + myUserprompt;
+    $("#but_send").text("WAIT...");
+    $("#but_send").prop("disabled", true);
 
-async function doSend(myModel, mySystemprompt, myHistory, myUserprompt, max_tokens, temperature) {
+    let ajaxSettings = {
+        url: url,
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({
+            model: myModel,
+            messages: [
+                {
+                    role: "system",
+                    content: mySystemprompt
+                },
+                {
+                    role: "user",
+                    content: messages
+                }
+            ],
+            max_tokens: max_tokens,
+            n: 1,
+            stop: null,
+            temperature: temperature
+        }),
+    };
+
+    if (bLocalRun) {
+        ajaxSettings.beforeSend = function (xhr) {
+            xhr.setRequestHeader("Authorization", `Bearer ${openai_apikey}`);
+        };
+    }
+
+    try {
+        const response = await $.ajax(ajaxSettings);
+        doReturn(response);
+    } catch (error) {
+        console.error(error);
+        alert("An error occurred. Check the console for more information.");
+    }
+
+    setTimeout(() => {
+        $("#but_send").prop("disabled", false);
+        $("#but_send").text("SEND");
+    }, 100);
+}
+async function XXXdoSend(myModel, mySystemprompt, myHistory, myUserprompt, max_tokens, temperature, bLocalRun) {
+    //Are we local or on a server so we hide the api key
+    //This is an PHP example but easy to make python or node.js versions
+    const url = bLocalRun ? 'https://api.openai.com/v1/chat/completions' : 'apicall.php';
+    
     const messages = myHistory + "USER: " + myUserprompt;
     $("#but_send").text("WAIT...");
     $("#but_send").prop("disabled", true);
 
     try {
         const response = await $.ajax({
-            url: "https://api.openai.com/v1/chat/completions",
+            url: url,
             type: "POST",
             beforeSend: function (xhr) {
                 xhr.setRequestHeader("Authorization", `Bearer ${openai_apikey}`);
