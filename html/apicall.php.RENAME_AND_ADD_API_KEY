@@ -1,11 +1,9 @@
 <?php
-// ONLY IF YOU ARE GOING TO RUN THE APPLICATION ON A PHP SERVER.  (see readme.md for more info)
+// ONLY DO THIS IF YOU ARE GOING TO RUN THE APPLICATION ON A PHP SERVER.  (see readme.md)
 // Rename this script to "apicall.php".
 // Replace "YOUR_OPENAI_API_KEY_HERE" with your actual OpenAI API key.
-// IMPORTANT: DO NOT upload the "apikeys.js" file to your server. (see readme.md for more info)
-// It is only meant for running the HTML client locally.
-// This PHP script is executed only when the HTML client can not find "apikeys.js"'s (openai_apikey).
-// This is intended functionality to choose between local and remote API key.
+// IMPORTANT SIDENOTE: DO NOT upload "apikeys.js" to your server. (see readme.md)
+// This is intended functionality to select local/remote OpenAI API calls.
 
 $APIKEY = "YOUR_OPENAI_API_KEY_HERE";
 
