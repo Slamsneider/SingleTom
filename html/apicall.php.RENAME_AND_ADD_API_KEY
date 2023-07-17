@@ -4,7 +4,7 @@
 // Replace "YOUR_OPENAI_API_KEY_HERE" with your actual OpenAI API key.
 // IMPORTANT SIDENOTE: DO NOT upload "apikeys.js" to your server. (see readme.md)
 // This is intended to detect if we are running local or remote.
-// The online functionality is not part of the tutorial project, but is included ad hoc.
+// The online server functionality is not part of the tutorial project, but is included ad hoc.
 
 $APIKEY = "YOUR_OPENAI_API_KEY_HERE";
 
