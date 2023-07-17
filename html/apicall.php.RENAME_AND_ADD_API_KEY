@@ -9,10 +9,11 @@
 
 $APIKEY = "YOUR_OPENAI_API_KEY_HERE";
 
-ini_set('post_max_size', '64M');
-ini_set('memory_limit', '128M');
-ini_set('max_execution_time', '300'); // 300 seconds = 5 minutes
+//ini_set('post_max_size', '64M');//use if you get 413 Request Entity Too Large error
+//ini_set('memory_limit', '128M');//use if you get 500 Internal Server Error
 
+// use this if your server is impatient and times out before the API call is finished
+ini_set('max_execution_time', '300'); // 300 seconds = 5 minutes
 
 $data = file_get_contents('php://input');
 $url = 'https://api.openai.com/v1/chat/completions';
