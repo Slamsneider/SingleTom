@@ -110,7 +110,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
 
   If **SingleTom** can not find the variable `openai_apikey` from the `apikeys.js` file, then it will use `apicall.php` to do the API CALLs instead. (Intended functionality)
 
-  Calling OpenAI directly is faster but we need to hide the API key when on a (public) server.
+  Calling OpenAI locally (directly) is faster and less prone to errors, but the client then exposes your API key to the world. So instead you make an api call to a server that can do the OpenAI API CALLs for you without exposing your API key.
 
   You can easily convert the api call in `apicall.php` to a Python script or Node.js script and serve the api call from that environment instead. Maybe even ask SingleTom to help with that. Atm. the only thing that needs a server request is the API CALLs to obfuscate your API key from online predators.
 
