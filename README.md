@@ -103,7 +103,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
 
   **I repeat that this tutorial project is aimed at local use only and ONLINE deployment is not the scope of this tutorial project.**
 
-  The important thing is that you do not expose your API key to the world. So instead you make an api call to a server that can do the OpenAI API CALLs for you not exposing your API key.
+  The important thing is that you do not expose your API key to the world. So instead you make an api call to a server that can do the OpenAI API CALLs for you while not exposing the API key to the user.
 
   ### Example using PHP
   In this ad hoc example I have used a PHP server, but you can use whatever you want.
