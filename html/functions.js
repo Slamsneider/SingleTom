@@ -99,54 +99,16 @@ async function doSend(myModel, mySystemprompt, myHistory, myUserprompt, max_toke
         doReturn(response);
     } catch (error) {
         console.error(error);
-        alert("An error occurred. Check the console for more information.");
-    }
-
-    setTimeout(() => {
-        $("#but_send").prop("disabled", false);
+        let errorMessage = "An error occurred.";
+        if (error.statusText === "error") {
+            errorMessage += "\n" + error.responseText;
+        }
+        alert(errorMessage);
+        $("#but_send").prop("disabled", false); // Enable the SEND button again
         $("#but_send").text("SEND");
-    }, 100);
-}
-async function XXXdoSend(myModel, mySystemprompt, myHistory, myUserprompt, max_tokens, temperature, bLocalRun) {
-    //Are we local or on a server so we hide the api key
-    //This is an PHP example but easy to make python or node.js versions
-    const url = bLocalRun ? 'https://api.openai.com/v1/chat/completions' : 'apicall.php';
-    
-    const messages = myHistory + "USER: " + myUserprompt;
-    $("#but_send").text("WAIT...");
-    $("#but_send").prop("disabled", true);
-
-    try {
-        const response = await $.ajax({
-            url: url,
-            type: "POST",
-            beforeSend: function (xhr) {
-                xhr.setRequestHeader("Authorization", `Bearer ${openai_apikey}`);
-            },
-            contentType: "application/json",
-            data: JSON.stringify({
-                model: myModel,
-                messages: [
-                    {
-                        role: "system",
-                        content: mySystemprompt
-                    },
-                    {
-                        role: "user",
-                        content: messages
-                    }
-                ],
-                max_tokens: max_tokens,
-                n: 1,
-                stop: null,
-                temperature: temperature
-            }),
-        });
-        doReturn(response);
-    } catch (error) {
-        console.error(error);
-        alert("An error occurred. Check the console for more information.");
+        return;
     }
+
     setTimeout(() => {
         $("#but_send").prop("disabled", false);
         $("#but_send").text("SEND");
@@ -160,6 +122,45 @@ function CheckmessageContent(msg) {
     return msg;
 }
 function doReturn(response) {
+    if (response.hasOwnProperty('error') || !response.choices[0].hasOwnProperty('finish_reason')) {
+        const error = response.error || {};
+        const message = error.message || 'An error occurred.';
+        const code = error.code || '';
+        const details = error.details || '';
+        const responseJSON = response.responseJSON || '';
+
+        const errorMessage = `Error: ${message}\nCode: ${code}\nDetails: ${details}\nResponseJSON: ${responseJSON}`;
+        alert(errorMessage);
+        $("#but_send").prop("disabled", false); // Enable the SEND button again
+        $("#but_send").text("SEND");
+        return;
+    }
+    const finReason = response.choices[0].finish_reason;
+    let messageContent = response.choices[0].message.content;
+    const totalTokens = response.usage.total_tokens;
+
+    console.log("response", response); //full response object
+    console.log("totalTokens: ", totalTokens);
+    console.log("finishReason: ", finReason);
+    messageContent = CheckmessageContent(messageContent);
+    $("#response").val(messageContent);
+    const modeltokens = models[$("#model").val()].tokens;
+    const msg = "Total tokens used: " + totalTokens + " of " + modeltokens + " | Finish reason: " + finReason;
+    $("#ResponseInNumbers").text(msg);
+    $("#but_send").prop("disabled", false); // Enable the SEND button again
+    $("#but_send").text("SEND");
+}
+function XXXdoReturn(response) {
+    if (response.hasOwnProperty('error')) {
+        const error = response.error;
+        const message = error.message || 'An error occurred.';
+        const code = error.code || '';
+        const details = error.details || '';
+
+        const errorMessage = `Error: ${message}\nCode: ${code}\nDetails: ${details}`;
+        alert(errorMessage);
+        return;
+    }
     const finReason = response.choices[0].finish_reason;
     let messageContent = response.choices[0].message.content;
     const totalTokens = response.usage.total_tokens;

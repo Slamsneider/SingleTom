@@ -1,18 +1,17 @@
 <?php
-// ONLY DO THIS IF YOU ARE GOING TO RUN THE APPLICATION ON A PHP SERVER.  (see readme.md)
-// Rename this script to "apicall.php".
+// Rename this script to "apicall.php"
 // Replace "YOUR_OPENAI_API_KEY_HERE" with your actual OpenAI API key.
-// IMPORTANT SIDENOTE: DO NOT upload "apikeys.js" to your server. (see readme.md)
-// This is intended to detect if we are running local or remote.
-// The online PHP server functionality is not part of the tutorial project, but is included ad hoc.
+// IMPORTANT: DO NOT upload the "apikeys.js" file to your server. (see readme.md for more info)
+// It is only meant for running the HTML client locally.
+// This PHP script is executed only when the HTML client can not find "apikeys.js"'s (openai_apikey).
+// This is intended functionality to choose between local and remote API key.
 
 $APIKEY = "YOUR_OPENAI_API_KEY_HERE";
 
-//ini_set('post_max_size', '64M');//use if you get 413 Request Entity Too Large error
-//ini_set('memory_limit', '128M');//use if you get 500 Internal Server Error
-
-// use this if your server is impatient and times out before the API call is finished
+ini_set('post_max_size', '64M');
+ini_set('memory_limit', '128M');
 ini_set('max_execution_time', '300'); // 300 seconds = 5 minutes
+
 
 $data = file_get_contents('php://input');
 $url = 'https://api.openai.com/v1/chat/completions';
@@ -41,6 +40,20 @@ if ($result === FALSE) {
     exit();
 } else {
     $response = json_decode($result, true);
+
+    if (isset($response['error'])) {
+        $error = $response['error'];
+        $message = $error['message'] ?? 'An error occurred.';
+        $code = $error['code'] ?? '';
+        $details = $error['details'] ?? '';
+
+        $errorMessage = "Error: $message\nCode: $code\nDetails: $details";
+        $response = array(
+            'status' => 'error',
+            'message' => $errorMessage,
+            'inputData' => $data
+        );
+    }
 }
 
 curl_close($ch);
