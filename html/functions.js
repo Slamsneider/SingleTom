@@ -27,6 +27,7 @@ $(document).ready(function () {
         const agent = agents[agentSelect.val()];
         $("#systemprompt").val(agent.sysprompt);
         $("#agentHeading").text(agentSelect.val() + " (" + modelSelect.val() + ")");
+        $("#agentDescription").text(agent.description);
     });
     modelSelect.on("change", function () {
         $("#agentHeading").text(agentSelect.val() + " (" + modelSelect.val() + ")");
