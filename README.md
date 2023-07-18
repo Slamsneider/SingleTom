@@ -119,8 +119,9 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   * RENAME `apicall.php.RENAME_AND_ADD_API_KEY` to `apicall.php` and open the file in a text editor.
   * Add your API key to the `apicall.php` file and save it.
   * Upload all files **EXCEPT `apikeys.js`**  from the `html` folder to your PHP server.
+  * Navigate to the index.html on the server and you are good to go.
 
-  Then when the HTML client can not find the `openai_apikey` variable from `apikeys.js`, it will use `apicall.php` to do the API CALLs instead. (Intended functionality)
+  Then when the online HTML client can not find the `openai_apikey` variable from `apikeys.js`, it will use `apicall.php` to do the API CALLs instead. (Intended functionality)
 
   The reason for this implementation is that the SingleTon client is intended for local use only. But you occasionally want to share your extended and improved version with someone, and then you can just upload it to a server and it will work. IMPORTANT: Do not upload the `apikeys.js` file!
 
