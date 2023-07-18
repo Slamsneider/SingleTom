@@ -138,32 +138,6 @@ function doReturn(response) {
     const finReason = response.choices[0].finish_reason;
     let messageContent = response.choices[0].message.content;
     const totalTokens = response.usage.total_tokens;
-
-    console.log("response", response); //full response object
-    console.log("totalTokens: ", totalTokens);
-    console.log("finishReason: ", finReason);
-    messageContent = CheckmessageContent(messageContent);
-    $("#response").val(messageContent);
-    const modeltokens = models[$("#model").val()].tokens;
-    const msg = "Total tokens used: " + totalTokens + " of " + modeltokens + " | Finish reason: " + finReason;
-    $("#ResponseInNumbers").text(msg);
-    $("#but_send").prop("disabled", false); // Enable the SEND button again
-    $("#but_send").text("SEND");
-}
-function XXXdoReturn(response) {
-    if (response.hasOwnProperty('error')) {
-        const error = response.error;
-        const message = error.message || 'An error occurred.';
-        const code = error.code || '';
-        const details = error.details || '';
-
-        const errorMessage = `Error: ${message}\nCode: ${code}\nDetails: ${details}`;
-        alert(errorMessage);
-        return;
-    }
-    const finReason = response.choices[0].finish_reason;
-    let messageContent = response.choices[0].message.content;
-    const totalTokens = response.usage.total_tokens;
     /*
     const id = response.id;
     const created = response.created;
@@ -178,6 +152,7 @@ function XXXdoReturn(response) {
     console.log("completionTokens: ", completionTokens);
     console.log("promptTokens: ", promptTokens);
     */
+
     console.log("response", response); //full response object
     console.log("totalTokens: ", totalTokens);
     console.log("finishReason: ", finReason);
@@ -186,4 +161,7 @@ function XXXdoReturn(response) {
     const modeltokens = models[$("#model").val()].tokens;
     const msg = "Total tokens used: " + totalTokens + " of " + modeltokens + " | Finish reason: " + finReason;
     $("#ResponseInNumbers").text(msg);
+    $("#but_send").prop("disabled", false); // Enable the SEND button again
+    $("#but_send").text("SEND");
 }
+
