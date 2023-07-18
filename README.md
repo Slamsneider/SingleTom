@@ -39,7 +39,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   - `apicall.php`: Just ignore this file if not using a PHP server. (see below)
 </details>
 
-![image](https://github.com/Slamsneider/SingleTom/assets/192285/cee99d3c-5b20-475f-ab8b-62ad7ec66095)
+![image](https://github.com/Slamsneider/SingleTom/assets/192285/3e536771-b3e1-4c98-a9c5-98496dd32603)
 
 <details>
   <summary>💻 Workflow using SingleTom as a tool</summary>
