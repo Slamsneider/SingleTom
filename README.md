@@ -111,9 +111,9 @@ There is 4 example agents for inspiration (See agents.js). - You are encouraged 
   * node.js
   * whatever...
 
-  **I repeat that this tutorial project is aimed at local use only and ONLINE deployment is not the scope of this tutorial project.**
+  **I repeat that this tutorial project is aimed at local use only and ONLINE deployment is not in the scope of the project.**
 
-  The important thing is to not expose your API key to the world. So instead you make an api call to your server that in turn can do the OpenAI API CALLs for you while not exposing the API key to the user.
+  But anyhows, the important thing is to not expose your API key to the world. So instead you make an api call to your server that in turn can do the OpenAI API CALLs for you while not exposing the API key to the user.
 
   ### Example using PHP
   This ad hoc example implementation is using a PHP server, but you can (change the scripts and) use whatever server you want.
