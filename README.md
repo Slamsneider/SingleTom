@@ -113,12 +113,12 @@ There is 4 example agents for inspiration (See agents.js). - You are encouraged 
 
   **I repeat that this tutorial project is aimed at local use only and ONLINE deployment is not in the scope of the project.**
 
-  But anyhows, the important thing is to not expose your API key to the world. So instead you make an api call to your server that in turn can do the OpenAI API CALLs for you while not exposing the API key to the user.
+  But anyhows, the important thing is to not expose your API key to the world. So instead you make an api call to your server that in turn can do the OpenAI API calls for you while not exposing the API key to the user.
 
   ### Example using PHP
   This ad hoc example implementation is using a PHP server, but you can (change the scripts and) use whatever server you want.
 
-  If **SingleTom** can not find the variable `openai_apikey` from the `apikeys.js` file, then it will use `apicall.php` to do the API CALLs instead. (Intended functionality)
+  If **SingleTom** can not find the variable `openai_apikey` from the `apikeys.js` file, then it will use `apicall.php` to do the API calls instead. (Intended functionality)
 
   Calling OpenAI locally (directly from your browser client) is faster and less prone to errors, but the client then would expose your API key. So instead you make an api call to your server that can do the OpenAI API calls for you without compromising your API key.
 
