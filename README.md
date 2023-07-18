@@ -107,7 +107,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   The important thing is to not expose your API key to the world. So instead you make an api call to your server that in turn can do the OpenAI API CALLs for you while not exposing the API key to the user.
 
   ### Example using PHP
-  In this ad hoc example I have used a PHP server, but you can (change the scripts and) use whatever you want.
+  This ad hoc example implementation is using a PHP server, but you can (change the scripts and) use whatever server you want.
 
   If **SingleTom** can not find the variable `openai_apikey` from the `apikeys.js` file, then it will use `apicall.php` to do the API CALLs instead. (Intended functionality)
 
