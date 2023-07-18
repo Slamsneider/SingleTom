@@ -58,7 +58,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   * If you do not "ADD TO HISTORY", eg. if you don't need the answer in further communication, then you save tokens down the line.
   * Remember to "ADD TO HISTORY" if you need the answer in further communication.
   * If you need to have a lot of text in history, then use `gpt-3.5-turbo-16k` as it has 16k tokens available for each request.
-  * Treat the HISTORY as a freakin' scratchpad, it's not a chatbot.
+  * Treat the HISTORY as a scratchpad (literally), it's not a freakin' chatbot.
   * There is no right or wrong way to do it, just do it your way.
   * If you get an error because there was not enough tokens then delete some stuff in history and try again.
   * If `finished_reason` is "length" (not complete) then you can continue the response by 'adding it to history', and then send a new prompt with the word "continue".
