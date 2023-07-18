@@ -122,7 +122,7 @@ There is 4 example agents for inspiration (See agents.js). - You are encouraged 
 
   Calling OpenAI locally (directly from your browser client) is faster and less prone to errors, but the client then would expose your API key. So instead you make an api call to your server that can do the OpenAI API calls for you without compromising your API key.
 
-  You can easily convert the api call in `apicall.php` to a Python script or Node.js script and serve the OpenAI api call from that environment instead. Maybe even ask SingleTom to help with that. Atm. the only thing that needs a server request is the API CALLs to obfuscate your API key from online predators.
+  You can easily convert the api call in `apicall.php` to a Python script or Node.js script and serve the OpenAI api call from that environment instead. Maybe even ask SingleTom to help with that. Atm. the only thing that needs a server request is the API calls to obfuscate your API key from online predators.
 
   So to run this ONLINE on a PHP server, then you need to do the following:
   * RENAME `apicall.php.RENAME_AND_ADD_API_KEY` to `apicall.php` and open the file in a text editor.
