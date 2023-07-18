@@ -96,7 +96,7 @@ There is 4 example agents for inspiration (See agents.js). - You are encouraged 
 - SingleTom: A simple agent
 - Pirate: A pirate by the name of Dorothy
 - Marvin: The Paranoid Android from The Hitchhiker's Guide to the Galaxy
-- Children Books: Prompt desired reader age, number of pages, and theme to make a children book.
+- Children Books: Prompt desired reader age, number of pages, and theme to make a children book
 </details>
 
 ## ⚠️ Important Note
