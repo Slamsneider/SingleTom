@@ -61,7 +61,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   * Treat the HISTORY as a scratchpad (literally), it's not a freakin' chatbot.
   * There is no right or wrong way to do it, just do it your way.
   * If you get an error because there was not enough tokens available then delete some stuff in history and try again.
-  * If `finished_reason` is "length" (not complete) then you can continue the response by 'adding it to history', and then send a new prompt with the word "continue".
+  * If `finished_reason` is "length" (not complete) then you can continue the response by 'adding it to history', and then send a new prompt with the word "continue" OR you adjust a higher `max_tokens` value and try again with same prompt, without adding the cut off response to history first.
 </details>
 
 <details>
