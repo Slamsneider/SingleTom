@@ -47,7 +47,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
 
   But if need be then it handles multiple documents and can work with them.
 
-  Here an example where I threw all **SingleTom**'s scripts in history and asked a question. I added all the 7 scripts just for good measure:
+  Here an example where I threw (drag/drop) all **SingleTom**'s scripts in history and asked a question. I added all the 7 scripts just for good measure:
 
   ![image](https://github.com/Slamsneider/SingleTom/assets/192285/129ce56a-48be-4a0f-a452-23e882bde7d6)
 
