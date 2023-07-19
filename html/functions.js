@@ -100,9 +100,9 @@ async function doSend(myModel, mySystemprompt, myHistory, myUserprompt, max_toke
     } catch (error) {
         console.error(error);
         let errorMessage = "An error occurred.";
-        if (error.statusText === "error") {
-            errorMessage += "\n" + error.responseText;
-        }
+        //append error object
+        errorMessage += "\n" + JSON.stringify(error);
+
         alert(errorMessage);
         $("#but_send").prop("disabled", false); // Enable the SEND button again
         $("#but_send").text("SEND");
@@ -122,19 +122,17 @@ function CheckmessageContent(msg) {
     return msg;
 }
 function doReturn(response) {
-    if (response.hasOwnProperty('error') || !response.choices[0].hasOwnProperty('finish_reason')) {
-        const error = response.error || {};
-        const message = error.message || 'An error occurred.';
-        const code = error.code || '';
-        const details = error.details || '';
-        const responseJSON = response.responseJSON || '';
-
-        const errorMessage = `Error: ${message}\nCode: ${code}\nDetails: ${details}\nResponseJSON: ${responseJSON}`;
-        alert(errorMessage);
+    try {
+        //response.hasOwnProperty(choices);
+        const test = response.choices[0].finish_reason;
+    } catch (error) {
+        console.log("ERROR:", response);
+        alert(response.message);
         $("#but_send").prop("disabled", false); // Enable the SEND button again
         $("#but_send").text("SEND");
         return;
     }
+
     const finReason = response.choices[0].finish_reason;
     let messageContent = response.choices[0].message.content;
     const totalTokens = response.usage.total_tokens;

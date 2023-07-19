@@ -43,7 +43,7 @@ if ($result === FALSE) {
 
     if (isset($response['error'])) {
         $error = $response['error'];
-        $message = $error['message'] ?? 'An error occurred.';
+        $message = $error['message'] ?? '(php) - An error occurred.';
         $code = $error['code'] ?? '';
         $details = $error['details'] ?? '';
 
