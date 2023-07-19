@@ -123,7 +123,7 @@ function CheckmessageContent(msg) {
 }
 function doReturn(response) {
     try {
-        //response.hasOwnProperty(choices);
+        //cruel hack I know but it works until betteer code arive ;)
         const test = response.choices[0].finish_reason;
     } catch (error) {
         console.log("ERROR:", response);
