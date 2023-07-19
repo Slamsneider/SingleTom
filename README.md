@@ -36,7 +36,6 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   - `functions.js`: Main functionality of the application.
   - `dropTextFile.js`: Functionality for drag and drop text files to the history.
   - `styles.css`: CSS styles for the application.
-  - `apicall.php`: Just ignore this file if not using a PHP server. (see below)
 </details>
 
 ![image](https://github.com/Slamsneider/SingleTom/assets/192285/3e536771-b3e1-4c98-a9c5-98496dd32603)
