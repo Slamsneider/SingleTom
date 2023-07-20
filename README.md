@@ -38,7 +38,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   - `styles.css`: CSS styles for the application.
 </details>
 
-![image](https://github.com/Slamsneider/SingleTom/assets/192285/3e536771-b3e1-4c98-a9c5-98496dd32603)
+![image](https://github.com/Slamsneider/SingleTom/assets/192285/2d749186-6287-4a79-9675-565adefc2b1f)
 
 <details>
   <summary>💻 Workflow using SingleTom as a tool</summary>
