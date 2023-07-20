@@ -61,7 +61,6 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   * Treat the HISTORY as a scratchpad (literally), it's not a freakin' chatbot.
   * There is no right or wrong way to do it, just do it your way.
   * If you get an error because there was not enough tokens available then delete some stuff in history and try again.
-  * If `finished_reason` is "length" (not complete) then you can continue the response by 'adding it to history', and then send a new prompt with the word "continue" OR you adjust a higher `max_tokens` value and try again with same prompt, without adding the cut off response to history first.
 </details>
 
 <details>
@@ -76,14 +75,14 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   - System prompt
   - Conversation history
   - User prompt
-  - `max_tokens` parameter value
+  - `max_tokens` parameter (optional and will default to max available tokens if not set)
 
-  The sum of these components must be less than the total tokens available for the model, or else an error will occur.
+  The sum of these components, must be less than the total tokens available for the model, or else an error will occur.
   ### max_tokens (parameter)
-  The `max_tokens` parameter determines how many tokens should be reserved for the response.
+  The `max_tokens` parameter determines how many tokens should be reserved for the response. If set to AUTO (default) it will reserve the maximum available tokens for the model. Note: You only pay for the actual tokens used and not by how many is reserved for the output.
 
   ### finish_reason (output)
-  The `finish_reason` indicates the reason why the response ended. It can be either "stop" or "length". "stop" means that the response had a 'normal' run, while "length" indicates that the response reached the `max_tokens` limit and is incomplete. If so, then to continue the response, you can use the word "continue" as the next prompt.
+  The `finish_reason` indicates the reason why the response ended. It can be either "stop" or "length". "stop" means that the response had a 'normal' run, while "length" indicates that the response reached the token limit and is incomplete. If so then delete some stuff in history and try again.
 
   ### temperature (parameter)
   The temperature parameter controls the randomness of the response. Lower values will result in more predictable responses, while higher values will result in more surprising responses (hallucinations).
