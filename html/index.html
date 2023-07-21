@@ -15,14 +15,14 @@
 <body>
     <h1 id="agentHeading"></h1>
     <div class="myDiv">
-        <span>SYSTEM PROMPT - </span>
+        <span><b>SYSTEM PROMPT</b> - </span>
         <label for="agent">Agent:</label>
         <select id="agent" title="Use this agent"></select> <span id="agentDescription" class="grey">.</span>
         <textarea id="systemprompt" title="This is the agent configuration" class="txtarea" rows="4" cols="50"
             placeholder="SYSTEM PROMPT..."></textarea>
     </div>
     <div class="myDiv">
-        <span>HISTORY</span>
+        <span><b>HISTORY</b></span>
         <button id="but_ClearHistory" title="Clear the History">Clear</button>
         <textarea id="history"
             title="This is the conversation history (memory). You can edit it and drag/drop text documents here to add them."
@@ -30,7 +30,7 @@
             placeholder="HISTORY... (Drag/drop text documents here)"></textarea>
     </div>
     <div class="myDiv">
-        <span>USER PROMPT </span>
+        <span><b>USER PROMPT</b> </span>
         <button id="but_ClearPrompt" title="Clear the prompt">Clear</button>
         <textarea id="userprompt" title="Write your prompt here" class="txtarea" rows="4" cols="50"
             placeholder="USER PROMPT..."></textarea>
@@ -63,7 +63,7 @@
         <div id="ResponseInNumbers" class="grey"></div>
     </div>
     <div class="myDiv">
-        <span>RESPONSE</span>
+        <span><b>RESPONSE</b></span>
         <textarea id="response" title="The agents response arives here" class="txtarea" rows="4" cols="50"
             placeholder="RESPONSE..."></textarea>
         <button id="but_AddToHistory" title="Add your prompt and the response to the conversation history">ADD TO
