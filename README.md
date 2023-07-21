@@ -54,7 +54,8 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   This example is only to somehow illustrate the flexibillity of this workflow. Also note the tokenuse where `gpt-3.5-turbo-16k` is a life saver.
 
   TIPS:
-  * The implemented agents are just simple examples, use your (system) prompt engineering skills to make your own, better agents.
+  * The implemented system-prompts (agents) are just simple examples, use your (system-) prompt engineering skills to make your own, better agents.
+  * Test by simply editing the text in the 'agent' textarea and when you have a good one, then add it to the `agents.js` file.
   * If you do not "ADD TO HISTORY", eg. if you don't need the answer in further communication, then you save token use down the line.
   * Remember to "ADD TO HISTORY" if you need the answer in further communication.
   * If you need to have a lot of text in history, then use `gpt-3.5-turbo-16k` as it has 16k tokens available for each request.
