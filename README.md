@@ -61,7 +61,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   * If you need to have a lot of text in history, then use `gpt-3.5-turbo-16k` as it has 16k tokens available for each request.
   * Treat the HISTORY as a scratchpad (literally), it's not a freakin' chatbot.
   * There is no right or wrong way to do it, just do it your way.
-  * If you get an error because there was not enough tokens available then delete some stuff in history and try again.
+  * If you get an error because there was not enough tokens available then if you have access to a model with more tokens use that and try again. Or delete some stuff in HISTORY and try again.
 </details>
 
 <details>
