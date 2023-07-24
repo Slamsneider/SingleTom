@@ -1,4 +1,7 @@
 <?php
+// ==============================================================================================
+// DO THIS ONLY IF YOU ARE GOING TO RUN THE APPLICATION ON A PHP SERVER.  (see readme.md for more info)
+// ==============================================================================================
 // Rename this script to "apicall.php"
 // Replace "YOUR_OPENAI_API_KEY_HERE" with your actual OpenAI API key.
 // IMPORTANT: DO NOT upload the "apikeys.js" file to your server. (see readme.md for more info)
