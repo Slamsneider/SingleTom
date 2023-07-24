@@ -83,7 +83,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   The `max_tokens` parameter determines how many tokens should be reserved for the response. If set to AUTO (default) it will reserve the maximum available tokens for the model. Note: You only pay for the actual tokens used and not by how many is reserved for the output.
 
   ### finish_reason (output)
-  The `finish_reason` indicates the reason why the response ended. It can be either "stop" or "length". "stop" means that the response had a 'normal' run, while "length" indicates that the response reached the token limit and is incomplete. If so then delete some stuff in history and try again.
+  The `finish_reason` indicates the reason why the response ended. It can be either "stop" or "length". "stop" means that the response had a 'normal' run, while "length" indicates that the response reached the token limit and is incomplete. If so, then make sure 'max' is 'auto' and/or delete some stuff in history, and then try again.
 
   ### temperature (parameter)
   The temperature parameter controls the randomness of the response. Lower values will result in more predictable responses, while higher values will result in more surprising responses (hallucinations).
