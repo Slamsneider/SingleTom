@@ -36,7 +36,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   - `functions.js`: Main functionality of the application.
   - `dropTextFile.js`: Functionality for drag and drop text files to the history.
   - `styles.css`: CSS styles for the application.
-  - `jquery_3_5_1.min.js`: jQuery library.
+  - `jquery_3_5_1.min.js`: jQuery library. ([from here](https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js))
 </details>
 
 ![image](https://github.com/Slamsneider/SingleTom/assets/192285/de041073-33a1-4603-a5c3-c39e3f20658e)
