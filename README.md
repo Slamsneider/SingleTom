@@ -94,10 +94,10 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
 
 There is 4 example system-prompts aka _Custom instructions_ for inspiration (See agents.js). - You are encouraged to make your own. System-prompt engineering is not the scope of this tutorial project.
 
-- SingleTom: A simple agent
-- Pirate: A pirate by the name of Dorothy
-- Marvin: The Paranoid Android from The Hitchhiker's Guide to the Galaxy
-- Children Books: Prompt desired reader age, number of pages, and theme to make a children book
+- **SingleTom**: A simple agent
+- **Pirate**: A pirate by the name of Dorothy
+- **Marvin**: The Paranoid Android from The Hitchhiker's Guide to the Galaxy
+- **Children Books**: Prompt desired reader age, number of pages, and theme to make a children book
 </details>
 
 ## ⚠️ Important Note
