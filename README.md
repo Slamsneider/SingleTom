@@ -63,7 +63,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   * Treat the HISTORY as a scratchpad (literally), it's not a freakin' chatbot.
   * There is no right or wrong way to do it, just do it your way.
   * If you get an error because there was not enough tokens available then if you have access to a model with more tokens use that and try again. Or delete some stuff in HISTORY and try again.
-  * Remember you can have multiple browser windows open at the same time.
+  * Remember you can have multiple browser windows (_sessions_) open at the same time.
 </details>
 
 <details>
