@@ -44,7 +44,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
 <details>
   <summary>💻 Workflow using SingleTom as a tool</summary>
   
-  You do not need to supply all documents when working with code, normally you would only have the essential parts in history (memory) or in your prompt.
+  You do not need to supply all documents when working with text/code, normally you would only have the essential parts in history (memory) or in your prompt.
 
   But if need be then it handles multiple documents and can work with them.
 
