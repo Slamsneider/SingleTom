@@ -91,7 +91,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
 </details>
 
 <details><summary>🤖 Agents (Make your own!)</summary>
-There is 4 example system-prompts (custom instructions) for inspiration (See agents.js). - You are encouraged to make your own. System-prompt engineering is not the scope of this tutorial project.
+There is 4 example system-prompts (_Custom instructions_) for inspiration (See agents.js). - You are encouraged to make your own. System-prompt engineering is not the scope of this tutorial project.
 
 - SingleTom: A simple agent
 - Pirate: A pirate by the name of Dorothy
