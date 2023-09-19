@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: aliceblue;
+    color: #000000;
 }
 
 .txtarea {
@@ -18,8 +19,24 @@ body {
     padding: 5px;
     margin: 5px;
     background-color: rgb(214, 236, 255);
+    color: #000000;
 }
 
 .grey {
     color: #676767;
+}
+
+.dark-skin {
+    /* Dark skin styles */
+    background-color: #333333;
+    color: #ffffff;
+}
+
+#skinButton {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
 }

@@ -1,5 +1,21 @@
 let bLocalRun;
 $(document).ready(function () {
+    // Check if the user has a saved preference for the skin
+    const savedSkin = localStorage.getItem('skin');
+    if (savedSkin === 'dark') {
+        $('body').addClass('dark-skin');
+    }
+
+    // Add click event listener to the button
+    $('#skinButton').on('click', function () {
+        // Toggle the dark skin class on the body element
+        $('body').toggleClass('dark-skin');
+
+        // Save the user's preference in localStorage
+        const currentSkin = $('body').hasClass('dark-skin') ? 'dark' : 'light';
+        localStorage.setItem('skin', currentSkin);
+    });
+    //--
     //check if running locally or on server so we can hide the api key if online
     if (typeof openai_apikey === 'undefined') {
         bLocalRun = false;
