@@ -47,6 +47,8 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   You do not need to supply all documents when working with text/code, normally you would only have the essential parts in history (memory) or in your prompt.
 
   But if need be then it handles multiple documents and can work with them.
+  
+  Just type a user prompt and press the "SEND" button.
 
   Here an example where I threw (drag/drop) all **SingleTom**'s scripts in history and asked a question. I added all the 7 scripts just for good measure (not the jquery library though):
 
