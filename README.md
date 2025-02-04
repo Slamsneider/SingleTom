@@ -82,7 +82,7 @@ NOTE: When one or more text files are drag/dropped onto the 'history' textarea, 
   - User prompt
   - `max_tokens` parameter (optional and will default to max available tokens if not set)
 
-  The sum of these components, must be less than the total tokens available for the model, or else an error will occur.
+  The sum of these components + the response tokens, must be less than the total tokens available for the model, or else an error will occur.
   ### max_tokens (parameter)
   The `max_tokens` parameter determines how many tokens should be reserved for the response. If set to AUTO (default) it will reserve the maximum available tokens for the model. Note: You only pay for the actual tokens used and not by how many is reserved for the output.
 
